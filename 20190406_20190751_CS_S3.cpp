@@ -51,7 +51,7 @@ vector<float> mutation(vector<float> chromosome, int generation)
                 y = ux;
             r = rand() % (1 - 0 + 1) + 0;
             delta = y * (1 - powf(r, (1 - generation / (0.01))));
-            if (r1 > 0.5)
+            if (r1 < 0.5)
                 chromosome[i] = chromosome[i] - delta;
             else
                 chromosome[i] = chromosome[i] + delta;
